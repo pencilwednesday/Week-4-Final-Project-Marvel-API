@@ -1,5 +1,5 @@
 /* Advanced Portfolio 
-    timestamp: 1:06:00 */
+    timestamp: 1:13:00 */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
@@ -28,11 +28,13 @@ button {
 }
 
 section {
-  background-color: #ffebbf;
+  background-color: white;
+  margin: 0 auto;
 }
 
 .container {
   padding: 50px 0;
+  width: 100%;
 }
 
 .row {
@@ -69,15 +71,43 @@ section {
   color: #f23c27;
 }
 
+.link__hover--effect {
+  position: relative;
+}
+
+.link__hover--effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  background-color: lightgray;
+  transition: all 300ms ease;
+}
+
+.link__hover--effect:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.link__hover--white {
+  background-color: white;
+}
+
+.link__hover--black {
+  background-color: black;
+}
+
 @keyframes fadeInOut {
   0% {
-    opacity: 0.1;
+    opacity: 0.2;
   }
   50% {
     opacity: 0.7;
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.2;
   }
 }
 
@@ -85,8 +115,20 @@ section {
   width: 100%;
   max-width: 1000px;
   position: absolute;
-  z-index: -2;
   animation: fadeInOut 5s ease-in-out infinite;
+  bottom: 50px;
+  display: block;
+}
+
+#hero-art {
+  padding-top: 430px;
+  left: 95px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.4;
+  top: -28px;
+  left: 107px; 
+  display: block;
 }
 
 /* 
@@ -97,6 +139,7 @@ section {
 
 #landing-page {
   min-height: 100vh;
+  max-width: 1200px;
 }
 
 .header {
@@ -190,8 +233,9 @@ section {
 }
 
 nav {
-    background-color: #1b729f;
+    background-color: rgb(71, 71, 71);
     display: flex;
+    position: absolute;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -199,9 +243,11 @@ nav {
     margin: 0 auto;
     padding: 0 20px;
     height: 72px;
-    border: 3px solid #902724;
+    border: 3px solid #d4443f;
     border-top: none;
     border-radius: 0 0 12px 12px;
+    box-shadow: 0 0 80px 0 rgb(0, 0, 0, 0.45);
+    z-index: 1000;
 }
 
 #marvel-logo {
@@ -238,9 +284,11 @@ nav {
 
 .project__img {
   width: 100%;
+  opacity: .92;
 }
 
 .project__wrapper {
+  height: 535px;
   position: relative;
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
@@ -310,8 +358,27 @@ nav {
 footer {
   background-color: #242424;
   display: flex;
+  padding: 6% 0;
 }
 
-.footer__container {
-  margin: 0 auto;
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo--img {
+  width: 82px;
+}
+
+.footer__social--list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 26px 0;
+}
+
+.footer__social--link,
+.footer__copyright {
+  color: white;
 }
