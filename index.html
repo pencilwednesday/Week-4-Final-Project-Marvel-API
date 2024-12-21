@@ -113,7 +113,7 @@
                 class="modal__language--img"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
               />
-              <span class="language__name">HTML</span>
+              <span class="language__name">CSS</span>
             </figure>
             <figure class="modal__language">
               <img
@@ -131,7 +131,31 @@
             </figure>
           </div>
         </div>
-        <div class="modal__half modal__contact">Let's have a chat.</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h3 class="modal__sub-title modal__subtitle--contact">
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="textarea" name="message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+        </div>
       </div>
     </section>
     <section id="projects">
