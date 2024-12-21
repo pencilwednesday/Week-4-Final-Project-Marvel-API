@@ -1,5 +1,5 @@
 /* Advanced Portfolio 
-    timestamp: Integrating Email JS 00:00 */
+    timestamp: Toggling Modal 00:00 */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
@@ -425,12 +425,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 
 .modal__overlay--loading {
   background-color: #242424;
   font-size: 80px;
-  z-index: -1;
 }
 
 .modal__overlay--success {
@@ -439,6 +439,10 @@ nav {
   font-weight: 700;
   align-items: center;
   padding: 28px;
+}
+
+.modal__overlay--visible {
+  z-index: 1;
 }
 
 .fa-spinner {
