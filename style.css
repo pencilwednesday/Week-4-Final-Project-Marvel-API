@@ -1,5 +1,5 @@
 /* Advanced Portfolio 
-    timestamp: Toggling Modal 00:00 */
+    timestamp: DarkMode 00:00 */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
@@ -32,7 +32,8 @@ section {
   margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   background-color: #242424;
   color: white;
@@ -53,14 +54,16 @@ textarea {
 
 label {
   font-size: 14px;
-  font-weight: bold
+  font-weight: bold;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #dcdfe6;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #f06449;
 }
 
@@ -100,7 +103,7 @@ input:focus, textarea:focus {
   font-size: 72px;
 }
 
-.highlight{
+.highlight {
   color: #f23c27;
 }
 
@@ -144,7 +147,7 @@ input:focus, textarea:focus {
   }
 }
 
-#box-art { 
+#box-art {
   width: 100%;
   max-width: 1000px;
   position: absolute;
@@ -160,8 +163,24 @@ input:focus, textarea:focus {
   position: absolute;
   opacity: 0.4;
   top: -28px;
-  left: 107px; 
+  left: 107px;
   display: block;
+}
+
+nav,
+.scroll,
+.header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
 }
 
 /* 
@@ -266,31 +285,30 @@ input:focus, textarea:focus {
 }
 
 nav {
-    background-color: rgb(71, 71, 71);
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 72px;
-    border: 3px solid #d4443f;
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 0 80px 0 rgb(0, 0, 0, 0.45);
-    z-index: 1000;
+  background-color: rgb(71, 71, 71);
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 72px;
+  border: 3px solid #d4443f;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 0 80px 0 rgb(0, 0, 0, 0.45);
+  z-index: 1000;
 }
 
 #marvel-logo {
   margin-left: 8px;
   width: 82px;
-
 }
 
 .nav__link--list {
-    display: flex;
+  display: flex;
 }
 
 .nav__link {
@@ -317,10 +335,18 @@ nav {
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 90px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal {
+  z-index: 60;
+  box-shadow: 0 20px 90px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 
 .modal__half {
@@ -330,10 +356,17 @@ nav {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -364,7 +397,7 @@ nav {
   position: absolute;
   bottom: -10px;
   transform: scale(0);
-  transition: all 300ms  ease;
+  transition: all 300ms ease;
 }
 
 .modal__language--img {
@@ -374,6 +407,7 @@ nav {
 .modal__contact {
   background-color: #242424;
   color: white;
+  transform: translateX(110%);
 }
 
 .modal__title {
@@ -422,7 +456,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: -1;
@@ -443,6 +477,7 @@ nav {
 
 .modal__overlay--visible {
   z-index: 1;
+  display: flex;
 }
 
 .fa-spinner {
@@ -481,7 +516,7 @@ nav {
 
 .project__img {
   width: 100%;
-  opacity: .92;
+  opacity: 0.92;
   transition: all 600ms ease;
 }
 
@@ -505,7 +540,7 @@ nav {
 
 .project__wrapper:hover .project__img {
   transform: scale(1.07);
-  filter: blur(5px)
+  filter: blur(5px);
 }
 
 .project__description {
@@ -525,7 +560,7 @@ nav {
 
 .project__wrapper--bg {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100%;
   background-color: #1c1d25;
