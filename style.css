@@ -148,21 +148,23 @@ textarea:focus {
 }
 
 #box-art {
-  width: 100%;
-  max-width: 1000px;
+  width: 75%;
   position: absolute;
   animation: fadeInOut 5s ease-in-out infinite;
-  bottom: 50px;
+  right: 7px;
+  bottom: 220px;
   display: block;
+  z-index: -110;
 }
 
 #hero-art {
-  padding-top: 430px;
-  left: 95px;
+  padding-top: 550px;
+  left: 122px;
   width: 100%;
+  max-width: 1000px;
   position: absolute;
   opacity: 0.4;
-  top: -28px;
+  top: -150px;
   left: 107px;
   display: block;
 }
@@ -512,12 +514,14 @@ nav {
   text-align: center;
   font-size: 40px;
   margin-bottom: 60px;
+  position: relative;
 }
 
 .project__img {
   width: 100%;
   opacity: 0.92;
   transition: all 600ms ease;
+  transform: scale(1.02);
 }
 
 .project:hover .project__img {
