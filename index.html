@@ -28,25 +28,28 @@
   <body>
     <section id="landing-page">
       <nav>
-        <figure>
+        <a
+          class="click"
+          href="https://www.marvel.com/corporate/about"
+          target="_blank"
+        >
           <img
             id="marvel-logo"
             src="/assets/marvel-comics-logo-png 2.png"
             alt=""
           />
-        </figure>
-
+        </a>
         <ul class="nav__link--list">
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover--effect link__hover-effect--black"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover--effect link__hover-effect--black"
               >Projects</a
             >
@@ -82,7 +85,7 @@
             <a href="#" class="social__link click">
               <i class="fa-solid fa-mask"></i>
             </a>
-            <a href="#" class="social__link ">
+            <a href="#" class="social__link">
               <i class="fa-regular fa-eye"></i>
             </a>
             <a href="#" class="social__link click">
@@ -138,6 +141,13 @@
               />
               <span class="language__name">Pyton</span>
             </figure>
+            <figure>
+              <img
+                class="bitmoji__02"
+                src="/assets/bitmoji_pic--02.png"
+                alt=""
+              />
+            </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
@@ -169,6 +179,9 @@
           <div class="modal__overlay modal__overlay--success">
             Thanks for the message! Look forward to speaking to you soon.
           </div>
+          <figure>
+            <img class="bitmoji__01" src="/assets/bitmoji_pic--01.png" alt="" />
+          </figure>
         </div>
       </div>
     </section>
@@ -216,13 +229,13 @@
     <footer>
       <div class="container">
         <div class="row footer__row">
-          <figure>
+          <a class="click" href="https://www.marvel.com/corporate/about" target="_blank">
             <img
               class="footer__logo--img"
               src="/assets/marvel-comics-logo-png 2.png"
               alt=""
             />
-          </figure>
+          </a>
           <div class="footer__social--list">
             <a
               href="#"
@@ -239,6 +252,7 @@
             <a
               href="#"
               class="footer__social--link link__hover--effect liver__hover-effect--white"
+              onclick="toggleModal()"
             >
               Contact
             </a>
