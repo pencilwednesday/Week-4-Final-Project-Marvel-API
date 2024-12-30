@@ -257,6 +257,7 @@ nav,
   bottom: 32px;
   right: 40px;
   z-index: 1000;
+  position: fixed;
 }
 
 .scroll {
@@ -397,8 +398,8 @@ nav {
 
 .bitmoji__01 {
   position: absolute;
-  right: -1px;
-  bottom: -5px;
+  right: 0px;
+  bottom: 0px;
   z-index: -1;
   width: 53%;
 }
@@ -648,3 +649,79 @@ footer {
 .footer__copyright {
   color: white;
 }
+
+/* tables, large smart phones */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+  .project__img {
+    transform: scale(1.03);
+  }
+  .modal__half {
+    width: 100%;
+  }
+  .input {
+    border: 3px solid #c0c4cc;
+    border-top: none;
+    border-left: none;
+  }
+  #box-art {
+    width: 100%;
+    bottom: 100px;
+  }
+  #hero-art {
+    align-items: center;
+    left: 0px;
+  }
+}
+
+/* small phones */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+  .header__para {
+    font-size: 18px;
+  }
+  .nav__link:first-child {
+    display: none;
+  }
+  .project__description--para {
+    display: none;
+  }
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--sub-title {
+    margin-bottom: 0;
+  }
+  .project__img {
+    transform: scale(1.05);
+  }
+  .modal__half {
+    padding: 40px;
+  }
+  #box-art {
+    width: 132%;
+    left: 9px;
+    bottom: 172px;
+  }
+ }

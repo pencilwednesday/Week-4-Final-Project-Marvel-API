@@ -39,10 +39,10 @@
             alt=""
           />
         </a>
-        <ul class="nav__link--list">
+        <ul class="nav__link--list" onclick="toggleModal()">
           <li class="nav__link">
             <a
-              href="#projects"
+              href="#"
               class="nav__link--anchor link__hover--effect link__hover-effect--black"
               >About</a
             >
@@ -94,9 +94,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-regular fa-paper-plane"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
