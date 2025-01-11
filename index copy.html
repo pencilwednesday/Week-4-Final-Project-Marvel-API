@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Super Heros</title>
+    <link rel="stylesheet" href="style copy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="index copy.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "TOTDZC7oKcYj2kEke",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="landing-page">
+      <nav>
+        <a
+          class="click"
+          href="https://www.marvel.com/corporate/about"
+          target="_blank"
+        >
+          <img
+            id="marvel-logo"
+            src="/assets/marvel-comics-logo-png 2.png"
+            alt=""
+          />
+        </a>
+        <ul class="nav__link--list" onclick="toggleModal()">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover--effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover--effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="/index.html"
+              class="nav__link--anchor link__hover--effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link">
+            <i class="fa-solid fa-magnifying-glass click nav__link--anchor"></i>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <h1 class="title__text">Hero Stan</h1>
+        <p class="lead text-center" id="message"></p>
+      </header>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <a
+            class="click"
+            href="https://www.marvel.com/corporate/about"
+            target="_blank"
+          >
+            <img
+              class="footer__logo--img"
+              src="/assets/marvel-comics-logo-png 2.png"
+              alt=""
+            />
+          </a>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__social--link link__hover--effect liver__hover-effect--white"
+            >
+              GitHub
+            </a>
+            <a
+              href="#"
+              class="footer__social--link link__hover--effect liver__hover-effect--white"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="#"
+              class="footer__social--link link__hover--effect liver__hover-effect--white"
+              onclick="toggleModal()"
+            >
+              Contact
+            </a>
+            <a
+              href="#"
+              class="footer__social--link link__hover--effect liver__hover-effect--white"
+            >
+              Resume
+            </a>
+          </div>
+          <div class="footer__copyright">
+            Data provided by Marvel &copy; 2025 MARVEL
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

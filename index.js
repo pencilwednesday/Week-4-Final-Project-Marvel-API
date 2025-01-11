@@ -5,6 +5,12 @@
 // Your private key
 // c594216bf76f5a1792d5e0ad5842d46d743b8832
 
+// 1c594216bf76f5a1792d5e0ad5842d46d743b8832b5025002fed92c379235ccd6df1878c1
+
+// md5 hash: 953185301aba7d4acdbf2a7ce85e009f
+
+// http://gateway.marvel.com/v1/public/characters?ts=1&apikey=b5025002fed92c379235ccd6df1878c1&hash=953185301aba7d4acdbf2a7ce85e009f
+
 //emailJS: template_dr7y6d7
 //serviceID: service_o3e6n0g
 //publicKey: TOTDZC7oKcYj2kEke
