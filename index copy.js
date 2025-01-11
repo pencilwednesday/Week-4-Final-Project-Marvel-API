@@ -13,7 +13,45 @@
 
 var marvel = {
   render: function() {
+    var url = "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=b5025002fed92c379235ccd6df1878c1&hash=953185301aba7d4acdbf2a7ce85e009f"
+    var message = document.getElementById("message");
+    var footer = document.getElementById("footer");
+    var marvelContainer = document.getElementById("marvel__container");
 
+    $.ajax({
+      url: url,
+      type: "GET",
+      beforeSend: function() {
+        message.innerHTML = "Loading..."
+      },
+      complete: function() {
+        message.innerHTML = "Sucessfully loaded!"
+      },
+      success:  function(data) {
+        footer.innerHTML = data.attributionHTML;
+        var string = "";
+        string += "<div class='row'>";
+
+        for(var i = 0; i < data.data.results.length; i++) {
+          var element = data.data.results[i];
+
+          string += "<div class='col-md-3'>";
+          string += "<h5>" + element.name + "</h5>";
+          string += "</div>";
+
+          if((i + 1) % 4 == 0) {
+            string += "</div>";
+            string += "<div class='row'>";
+          }
+        }
+
+        marvelContainer.innerHTML = string;
+
+      },
+      error: function() {
+        message.innerHTML = "We are sorry! Please Reloead page."
+      }
+    });
   }
-}
+};
 marvel.render();
