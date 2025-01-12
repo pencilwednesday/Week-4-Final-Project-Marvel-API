@@ -12,8 +12,9 @@
 // http://gateway.marvel.com/v1/public/characters?ts=1&apikey=b5025002fed92c379235ccd6df1878c1&hash=953185301aba7d4acdbf2a7ce85e009f
 
 var marvel = {
-  render: function() {
-    var url = "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=b5025002fed92c379235ccd6df1878c1&hash=953185301aba7d4acdbf2a7ce85e009f"
+  render: function () {
+    var url =
+      "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=b5025002fed92c379235ccd6df1878c1&hash=953185301aba7d4acdbf2a7ce85e009f";
     var message = document.getElementById("message");
     var footer = document.getElementById("footer");
     var marvelContainer = document.getElementById("marvel__container");
@@ -21,37 +22,39 @@ var marvel = {
     $.ajax({
       url: url,
       type: "GET",
-      beforeSend: function() {
-        message.innerHTML = "Loading..."
+      beforeSend: function () {
+        message.innerHTML = "Loading...";
       },
-      complete: function() {
-        message.innerHTML = "Sucessfully loaded!"
+      complete: function () {
+        message.innerHTML = "Sucessfully loaded!";
       },
-      success:  function(data) {
+      success: function (data) {
         footer.innerHTML = data.attributionHTML;
         var string = "";
         string += "<div class='row'>";
 
-        for(var i = 0; i < data.data.results.length; i++) {
+        for (var i = 0; i < data.data.results.length; i++) {
           var element = data.data.results[i];
 
           string += "<div class='col-md-3'>";
-          string += "<h5>" + element.name + "</h5>";
+          string += " <img src='"+ element.thumbnail.path +" /portrait_fantastic." +element.thumbnail.extension+"' />";
+          string += " <a href='" + element.urls[0].url + "' target='_blank'>";
+          string += " <h4>" + element.name + "</h4>";
+          string += " </a>";
           string += "</div>";
 
-          if((i + 1) % 4 == 0) {
+          if ((i + 1) % 4 == 0) {
             string += "</div>";
             string += "<div class='row'>";
           }
         }
 
         marvelContainer.innerHTML = string;
-
       },
-      error: function() {
-        message.innerHTML = "We are sorry! Please Reloead page."
-      }
+      error: function () {
+        message.innerHTML = "We are sorry! Please Reloead page.";
+      },
     });
-  }
+  },
 };
 marvel.render();
