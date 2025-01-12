@@ -36,28 +36,13 @@ section {
   margin: 0 auto;
 }
 
-label {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-input:hover,
-textarea:hover {
-  border-color: #dcdfe6;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #f06449;
-}
-
 .container {
   padding: 50px 0;
   width: 100%;
 }
 
 #marvel__container {
-  padding: 150px 75px 0 75px;
+  padding: 75px 50px 0 50px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -83,17 +68,6 @@ textarea:focus {
 
 .click:active {
   transform: scale(0.6);
-}
-
-.title {
-  font-size: 120px;
-  margin-bottom: 12px;
-  text-align: left;
-  line-height: 1;
-}
-
-.title__secondary {
-  font-size: 72px;
 }
 
 .highlight {
@@ -171,14 +145,6 @@ nav,
   transition: all 600ms 800ms;
 }
 
-.modal--open nav,
-.modal--open .scroll,
-.modal--open .header {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 400ms;
-}
-
 /* 
 
   LANDING PAGE
@@ -196,52 +162,6 @@ nav,
   top: 110px;
   width: 100%;
   max-width: 1000px;
-
-}
-
-.title__text {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 62px 0 8px 0;
-}
-
-#message {
-  text-align: center;
-  padding: 0 0 22px 0;
-}
-
-#footer {
- flex-wrap: wrap;
- position: absolute;
- bottom: 0;
- left: 10px;
-}
-
-.header__para {
-  font-size: 24px;
-  line-height: 2;
-  max-width: 450px;
-}
-
-.social__list {
-  margin-top: 16px;
-  display: flex;
-}
-
-.social__link {
-  background-color: #1a323e;
-  color: white;
-  padding: 6px;
-  width: 32px;
-  height: 32px;
-  font-size: 14px;
-  margin-right: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
 }
 
 /* 
@@ -249,57 +169,6 @@ nav,
   NAVIGATION 
 
 */
-
-.mail__btn {
-  width: 70px;
-  height: 70px;
-  font-size: 32px;
-  border-radius: 50%;
-  border: none;
-  background-color: #1a323e;
-  color: white;
-  position: absolute;
-  bottom: 32px;
-  right: 40px;
-  z-index: 1000;
-  position: fixed;
-}
-
-.scroll {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll__icon {
-  width: 20px;
-  height: 30px;
-  border: 2px solid #242424;
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll__icon:after {
-  content: "";
-  width: 4px;
-  height: 6px;
-  background-color: #242424;
-  border-radius: 2px;
-  animation: scroll 1000ms infinite alternate-reverse;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(3px);
-  }
-
-  100% {
-    transform: rotateY(-3px);
-  }
-}
 
 nav {
   background-color: rgb(71, 71, 71);
@@ -340,92 +209,33 @@ nav {
 
 /* 
 
-  PREVIEW SECTION 
+  STAN APP PREVIEW SECTION 
 
 */
 
-.section__title {
+.title__text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 62px 0 8px 0;
+}
+
+#message {
   text-align: center;
-  font-size: 40px;
-  margin-bottom: 60px;
-  position: relative;
+  padding: 0 0 22px 0;
 }
 
-.project__img {
-  width: 100%;
-  opacity: 0.92;
-  transition: all 600ms ease;
-  transform: scale(1.02);
-}
-
-.project:hover .project__img {
-  transform: scale(1.07);
-  filter: blur(5px);
-}
-
-.project__wrapper {
-  position: relative;
-  border-radius: 20px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
-  overflow: hidden;
-  background-color: white;
-}
-
-.project__wrapper:hover .project__description {
-  opacity: 1;
-  transform: translateY(-50%);
-}
-
-.project__wrapper:hover .project__img {
-  transform: scale(1.07);
-  filter: blur(5px);
-}
-
-.project__description {
-  position: absolute;
-  top: 50%;
-  left: 90px;
-  transform: translateY(100%);
-  opacity: 0;
-  transition: opacity 300ms, transform 450ms ease;
-  color: white;
-  max-width: 550px;
-}
-
-.project__wrapper:hover .project__wrapper--bg {
-  opacity: 0.7;
-}
-
-.project__wrapper--bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1c1d25;
-  opacity: 0;
-}
-
-.project__description--title {
-  font-size: 40px;
-}
-
-.project__description--sub-title {
-  margin-top: 8px;
-}
-
-.project__description--link {
-  color: white;
-  font-size: 20px;
-  margin-right: 16px;
-}
-
-.project__description--para {
-  margin: 16px 0;
+#footer {
+ flex-wrap: wrap;
+ position: absolute;
+ bottom: 0;
+ left: 10px;
 }
 
 /* 
 
-  PREVIEW SECTION 
+  FOOTER 
 
 */
 

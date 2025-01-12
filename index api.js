@@ -37,9 +37,10 @@ var marvel = {
           var element = data.data.results[i];
 
           string += "<div class='col-md-3'>";
-          string += " <img src='"+ element.thumbnail.path +" /portrait_fantastic." +element.thumbnail.extension+"' />";
+          string += "  <img src ='" + element.thumbnail.path + " /portraint_fantastic." + element.thumbnail.extension + "' />";
+          // console.log("https://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/portrait_small.jpg")
           string += " <a href='" + element.urls[0].url + "' target='_blank'>";
-          string += " <h4>" + element.name + "</h4>";
+          string += " <h4>" + element.name + "</h4>"; 
           string += " </a>";
           string += "</div>";
 
